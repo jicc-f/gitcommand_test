@@ -1,0 +1,37 @@
+{
+  "id": "2385233",
+  "name": "normalicon",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "常用图标",
+  "glyphs": [
+    {
+      "icon_id": "4375295",
+      "name": "换肤",
+      "font_class": "huanfu",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "18506927",
+      "name": "设 置",
+      "font_class": "shezhi",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "19551276",
+      "name": "亲情",
+      "font_class": "3qinqing",
+      "unicode": "e823",
+      "unicode_decimal": 59427
+    },
+    {
+      "icon_id": "19708137",
+      "name": "通讯录",
+      "font_class": "tongxunlu",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}
