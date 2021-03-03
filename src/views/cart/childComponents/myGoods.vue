@@ -33,7 +33,8 @@
     methods: {
       sClick(){
       
-      }
+      },
+    
     },
     //生命周期
     created() {},

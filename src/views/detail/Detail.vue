@@ -47,6 +47,8 @@
   import DetailBottomBar from './childComponents/DetailBottomBar.vue'
   //导入混入内容
   import {refresh,backTop} from '../../common/mixin'
+  //导入
+  import { mapActions } from "vuex";
   export default {
     name: 'detail',
     //组件
@@ -117,10 +119,15 @@
         goods.iid = this.iid;
         goods.counter = 0;
         // this.$store.commit("joinCart",goods);        
-        this.$store.dispatch("joinCart",goods).then(res => {
+        // this.$store.dispatch("joinCart",goods).then(res => {
+        //   this.$toast.show(res, 2000)
+        // });
+        this.addCart(goods).then(res => {
           this.$toast.show(res, 2000)
-        }); 
-      }
+          });
+      },
+      //先用map把actions中的addCart函数合并到methods中，然后调用它
+       ...mapActions(["addCart"])
 
     },
     //生命周期

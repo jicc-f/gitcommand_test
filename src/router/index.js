@@ -7,6 +7,11 @@ const Profile = ()=> import('../views/profile/Profile.vue');
 
 const Detail= ()=> import('../views/detail/Detail.vue');
 const Comment= ()=> import('../views/comment/Comment.vue');
+const Register= ()=> import('../views/profile/childComponents/login/register.vue')
+
+
+
+
 
 
 
@@ -38,7 +43,11 @@ const routes = [
   {
     path:'/comment',
     component: Comment
-  }
+  },
+  {
+    path:'/register',
+    component: Register
+  },
   
 ]
 

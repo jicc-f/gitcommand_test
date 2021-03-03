@@ -44,6 +44,7 @@ export default {
     right: 0; */
     display: flex;
     text-align:center ;
+    width: 100vw;
     /* z-index: 9; */
 
 }

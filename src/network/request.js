@@ -4,7 +4,7 @@ export default function request(config) {
         baseURL: 'http://123.207.32.32:8000/api/h8',
         timeout: 5000
     })
-    //请求拦截
+    // 请求拦截
     instance.interceptors.request.use(
         config => {
             return config;
@@ -22,5 +22,6 @@ export default function request(config) {
             console.log(err);
         }
     )
-    return instance(config)
+    return instance(config);
+  
 }

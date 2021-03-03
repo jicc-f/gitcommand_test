@@ -34,6 +34,7 @@
 
 
 
+
 	export default {
 		//组件
 		components: {
@@ -43,7 +44,7 @@
 			HomeSwiper,
 			HomeRecommend,
 			Goods,
-			BackTop
+			BackTop,
 
 		},
 		//父传子
@@ -102,7 +103,8 @@
 				this.$refs.tabControl2.currentIndex = index;
 				this.$refs.tabControl1.currentIndex = index;
 
-			},
+			}
+			,
 			//网络请
 			getHomeGoodsData(type) {
 				const page = this.goods[type].page + 1;
@@ -151,7 +153,7 @@
 		//生命周期
 		created() {
 			getMultiData().then(res => {
-					// console.log(res);
+					console.log(res);
 					this.banners = res.data.banner.list;
 					this.recommends = res.data.recommend.list;
 				})
@@ -160,8 +162,9 @@
 			this.$bus.$on('imageLoad', () => {
 				// console.log(this.$refs.scroll.scroll.refresh);
 				//图片加载一次就调用一次
-			this.$refs.scroll.scroll &&	this.$refs.scroll.scroll.refresh();
-			}),
+			this.$refs.scroll && this.$refs.scroll.scroll &&	this.$refs.scroll.scroll.refresh();
+			})
+			,
 			this.getHomeGoodsData('pop');
 			this.getHomeGoodsData('new');
 			this.getHomeGoodsData('sell');

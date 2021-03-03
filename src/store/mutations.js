@@ -7,4 +7,5 @@ export default{
             payload.counter = 1;
             state.mygoods.push(payload);
         }
-      }
+
+     }

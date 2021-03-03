@@ -1,6 +1,6 @@
 <template>
   <div class="select" >
-    <img src="../../../assets/img/icon/select.png" class="select" :class="{isCheck :isChecked }" @click="sClick"> 
+    <img src="../../../assets/img/icon/select.png" class="select" :class="{isCheck :isChecked }" /> 
   </div>
 </template>
 <script>
@@ -10,7 +10,8 @@ export default {
 //父传子
   props:{
     isChecked:{
-      type:Boolean,
+      type:Boolean
+
     }
     
   },
@@ -25,9 +26,6 @@ export default {
   computed:{},
 //方法
   methods:{
-    sClick(){
-      this.sCheck = !this.sCheck
-    }
   },
 //生命周期
   created(){},
@@ -37,6 +35,8 @@ export default {
 <style scoped>
 .select{
   position: relative;
+  height: 100%;
+  width: 10%;
 }
 .select img{
   width: 20px;
